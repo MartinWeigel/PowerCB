@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:PowerCB-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PowerCB"
-Date "2019-12-01"
-Rev "1.0"
+Date "2020-12-11"
+Rev "02"
 Comp ""
 Comment1 "https://creativecommons.org/licenses/by/4.0/"
 Comment2 "License: CC BY 4.0"
@@ -46,10 +45,6 @@ Wire Wire Line
 Connection ~ 2800 2050
 Wire Wire Line
 	2800 2050 3000 2050
-NoConn ~ 2550 2250
-NoConn ~ 2550 2350
-Wire Wire Line
-	2250 2650 2250 2700
 $Comp
 L Device:LED D1
 U 1 1 5D99B7B2
@@ -101,21 +96,7 @@ $EndComp
 Wire Wire Line
 	4400 1300 4500 1300
 Wire Wire Line
-	3400 2700 2250 2700
-Wire Wire Line
 	3400 2450 3400 2700
-Connection ~ 2250 2700
-$Comp
-L Connector:USB_B_Micro J1
-U 1 1 5DA6372D
-P 2250 2250
-F 0 "J1" H 2307 2717 50  0000 C CNN
-F 1 "USB_B_Micro" H 2307 2626 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 2400 2200 50  0001 C CNN
-F 3 "~" H 2400 2200 50  0001 C CNN
-	1    2250 2250
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Conn_01x01_Male J3
 U 1 1 5DA97615
@@ -306,34 +287,29 @@ Wire Wire Line
 	6650 3150 6950 3150
 Wire Wire Line
 	6950 3250 6650 3250
-NoConn ~ 2150 2650
+NoConn ~ 1400 2200
 $Comp
 L power:GND #PWR01
 U 1 1 5D9772CB
-P 2250 2850
-F 0 "#PWR01" H 2250 2600 50  0001 C CNN
-F 1 "GND" H 2255 2677 50  0000 C CNN
-F 2 "" H 2250 2850 50  0001 C CNN
-F 3 "" H 2250 2850 50  0001 C CNN
-	1    2250 2850
-	1    0    0    -1  
+P 2550 2700
+F 0 "#PWR01" H 2550 2450 50  0001 C CNN
+F 1 "GND" H 2555 2527 50  0000 C CNN
+F 2 "" H 2550 2700 50  0001 C CNN
+F 3 "" H 2550 2700 50  0001 C CNN
+	1    2550 2700
+	0    1    1    0   
 $EndComp
 $Comp
 L Connector:Conn_01x01_Male J2
 U 1 1 5DA96406
-P 2700 2850
-F 0 "J2" H 2672 2782 50  0000 R CNN
-F 1 "Mounting_1" H 2672 2873 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 2700 2850 50  0001 C CNN
-F 3 "~" H 2700 2850 50  0001 C CNN
-	1    2700 2850
-	-1   0    0    1   
+P 2800 2900
+F 0 "J2" H 2772 2832 50  0000 R CNN
+F 1 "Mounting_1" H 2772 2923 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 2800 2900 50  0001 C CNN
+F 3 "~" H 2800 2900 50  0001 C CNN
+	1    2800 2900
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2250 2700 2250 2850
-Wire Wire Line
-	2250 2850 2500 2850
-Connection ~ 2250 2850
 Wire Wire Line
 	2800 1900 2800 2050
 $Comp
@@ -353,8 +329,6 @@ Wire Wire Line
 Connection ~ 4350 2700
 Wire Wire Line
 	4350 2700 4550 2700
-Wire Wire Line
-	3400 2700 4350 2700
 Wire Wire Line
 	3800 2050 4350 2050
 Wire Wire Line
@@ -433,4 +407,60 @@ Connection ~ 4950 2700
 Wire Wire Line
 	5350 2050 5500 2050
 Connection ~ 5350 2050
+Wire Wire Line
+	3400 2700 2800 2700
+Wire Wire Line
+	3400 2700 4350 2700
+$Comp
+L PowerCB:USB-C-Power U2
+U 1 1 5FD43F49
+P 1150 2150
+F 0 "U2" H 1158 2565 50  0000 C CNN
+F 1 "USB-C-Power" H 1158 2474 50  0000 C CNN
+F 2 "PowerCB:UJC-HP-3-SMT-TR" H 1100 2450 50  0001 C CNN
+F 3 "" H 1100 2450 50  0001 C CNN
+	1    1150 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1400 2300
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD3C1AD
+P 1600 2000
+F 0 "#PWR?" H 1600 1850 50  0001 C CNN
+F 1 "+5V" V 1615 2128 50  0000 L CNN
+F 2 "" H 1600 2000 50  0001 C CNN
+F 3 "" H 1600 2000 50  0001 C CNN
+	1    1600 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD3CA40
+P 1600 2100
+F 0 "#PWR?" H 1600 1850 50  0001 C CNN
+F 1 "GND" V 1605 1972 50  0000 R CNN
+F 2 "" H 1600 2100 50  0001 C CNN
+F 3 "" H 1600 2100 50  0001 C CNN
+	1    1600 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 2100 1600 2100
+Wire Wire Line
+	1600 2000 1400 2000
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD407E4
+P 2550 2050
+F 0 "#PWR?" H 2550 1900 50  0001 C CNN
+F 1 "+5V" V 2565 2178 50  0000 L CNN
+F 2 "" H 2550 2050 50  0001 C CNN
+F 3 "" H 2550 2050 50  0001 C CNN
+	1    2550 2050
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2800 2700
+Wire Wire Line
+	2550 2700 2800 2700
 $EndSCHEMATC

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name PowerCB-rescue)(type Legacy)(uri ${KIPRJMOD}/PowerCB-rescue.lib)(options "")(descr ""))
+  (lib (name PowerCB)(type Legacy)(uri ${KIPRJMOD}/PowerCB.lib)(options "")(descr ""))
+)
