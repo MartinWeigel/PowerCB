@@ -2,6 +2,8 @@
 
 PowerCB is a small PCB to power a breadboard with 3.3V. It has a small footprint to avoid blocking pins on the breadboard. The measurements fit an ELEGOO breadboard, but should work with other brands as well. It can be either used on the side of the breadboard to power one side only *or* in the middle to bridge all power lines. The board can be powered through USB-C or the two mounting holes, e.g. by connecting it to a power supply. It is based on a [TPS73633](http://www.ti.com/product/TPS73633-EP) low-dropout (LDO) linear voltage regulator. The optional 0805-capacitor pads can be used for additional bypass capacitors.
 
+This board was designed using [KiCad 6.0](http://www.kicad.org).
+
 ## Design
 ![Rendering of the board](./board-rendering.jpg)
 ![Example usage of the board](./example.jpg)
